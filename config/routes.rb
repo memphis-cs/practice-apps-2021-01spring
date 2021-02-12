@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root to: redirect('/video_games')
+
+  get 'video_games', to: 'video_games#index', as: 'video_games'
+
 end
