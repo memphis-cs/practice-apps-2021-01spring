@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  root to: redirect('/tracks')
+
+  get 'tracks', to: 'tracks#index', as: 'tracks'
+  get 'tracks/:id', to: 'tracks#show', as: 'track'
+
 end
