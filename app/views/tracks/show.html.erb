@@ -2,7 +2,7 @@
 
 <ul>
   <li>Artist: <%= @track.artist ? @track.artist : '(no given)' %></li>
-  <li>Length: <%= @track.length / 60 %>:<%= @track.length % 60 %></li>
+  <li>Length: <%= @track.length / 60 %>:<%= "%02d" % (@track.length % 60) %></li>
 </ul>
 
 <p>
