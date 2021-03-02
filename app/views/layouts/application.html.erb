@@ -13,6 +13,10 @@
   <body>
     <main role="main" class="container">
 
+      <p class="mt-1 text-right">
+        <%= link_to 'TODO', nil, class: 'btn btn-outline-primary btn-sm' %>
+      </p>
+
       <% flash.each do |key, message| %>
         <div class="alert <%= flash_class(key) %> alert-dismissible fade show text-center" role="alert">
           <%= message %>

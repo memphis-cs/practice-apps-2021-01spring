@@ -21,7 +21,7 @@ class ListingsController < ApplicationController
       flash[:success] = 'Listing was successfully created.'
       redirect_to listing_url(@listing)
     else
-      flash[:error] = 'Unable to create listing.'
+      flash.now[:error] = 'Unable to create listing.'
       render :new
     end
   end
@@ -37,7 +37,7 @@ class ListingsController < ApplicationController
       flash[:success] = 'Listing was successfully updated.'
       redirect_to listing_url(@listing)
     else
-      flash[:error] = 'Unable to update listing.'
+      flash.now[:error] = 'Unable to update listing.'
       render :edit
     end
   end
